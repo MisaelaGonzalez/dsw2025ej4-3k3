@@ -9,8 +9,8 @@ import java.util.InvalidPropertiesFormatException;
 public class Program {
 
     public static void main(String[] args) throws IllegalArgumentException, InvalidPropertiesFormatException {
-        Persistencia.inicializar();
-        ListarAnimalesView view = new ListarAnimalesView();
+       Persistencia.inicializar();
+        Menu view = new Menu();
         view.setVisible(true);
     }
 }
