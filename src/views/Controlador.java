@@ -31,4 +31,21 @@ public class Controlador {
         double totalHerbivoros = Persistencia.getTotalComida(TipoAlimentacion.HERBIVORO);
         return new ComidaViewModel(totalCarnivoros, totalHerbivoros);
     }
+    
+    public static void Listar(){
+        ListarAnimalesView listar = new ListarAnimalesView();
+                listar.setVisible(true);
+    }
+    
+    
+    public static void Agregar(){
+        CargarAnimal cargar = new CargarAnimal();
+               cargar.setVisible(true);
+    }
+    
+    public static void salir(CargarAnimal cargar){
+        cargar.dispose();
+    }
+
+
 }
