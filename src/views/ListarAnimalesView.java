@@ -4,6 +4,8 @@
  */
 package views;
 
+import data.Persistencia;
+import domain.Mamifero;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -11,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author franc
  */
-public class ListarAnimalesView extends javax.swing.JFrame {
+public final class ListarAnimalesView extends javax.swing.JFrame {
 
     /**
      * Creates new form ListarAnimalesView
@@ -20,22 +22,28 @@ public class ListarAnimalesView extends javax.swing.JFrame {
         initComponents();
         listarAnimales();
     }
-    private void listarAnimales(){
-        ArrayList<AnimalViewModel> animales = Controlador.getAnimales();
-        animalesGrid.setModel(new DefaultTableModel(new Object[][] {}, 
-            new String[] { "Especie", "Edad", "Peso", "Sector", "Comida Fija", "Por. Peso" }));
-        
-        for(AnimalViewModel animal : animales){
-            ((DefaultTableModel)animalesGrid.getModel()).addRow(new Object[] {
-                animal.getEspecie(),
-                animal.getEdad(),
-                animal.getPeso(),
-                animal.getSector(),
-                animal.getValorFijo() > 0 ? String.format("%.2f%n Kgs.", animal.getValorFijo()) : "-",
-                animal.getPorcentaje() > 0 ? String.format("%.2f %%", animal.getPorcentaje()*100) : "-"
-            });
-        }
+    
+    
+    
+    public void listarAnimales() {
+    // Obtener los animales desde la lista estática en Persistencia
+    ArrayList<Mamifero> animales = Persistencia.getAnimales();
+    
+    DefaultTableModel model = (DefaultTableModel) animalesGrid.getModel();
+    model.setRowCount(0);  // Limpiar filas existentes
+
+    for (Mamifero animal : animales) {
+        model.addRow(new Object[]{
+            animal.getEspecie(),
+            animal.getEdad(),
+            animal.getPeso(),
+            animal.getSector(),
+            //animal.getValorFijo() > 0 ? String.format("%.2f%n Kgs.", animal.getValorFijo()) : "-",
+            //animal.getPorcentaje() > 0 ? String.format("%.2f %%", animal.getPorcentaje() * 100) : "-"
+        });
     }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,7 +65,6 @@ public class ListarAnimalesView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Zoológico - Listar Animales");
-        setPreferredSize(new java.awt.Dimension(640, 480));
         setSize(new java.awt.Dimension(640, 480));
 
         animalesGrid.setModel(new javax.swing.table.DefaultTableModel(
@@ -193,6 +200,7 @@ public class ListarAnimalesView extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ListarAnimalesView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
