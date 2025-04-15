@@ -17,7 +17,7 @@ public class Controlador {
     public static ArrayList<Sector> getSectores(){
         return Persistencia.getSectores();
     }
-    
+        
     public static ArrayList<AnimalViewModel> getAnimales(){
         ArrayList<AnimalViewModel> animales = new ArrayList<>();
         for(Mamifero animal : Persistencia.getAnimales()){
@@ -31,4 +31,11 @@ public class Controlador {
         double totalHerbivoros = Persistencia.getTotalComida(TipoAlimentacion.HERBIVORO);
         return new ComidaViewModel(totalCarnivoros, totalHerbivoros);
     }
+    
+    public static void Listar(){
+        ListarAnimalesView listar = new ListarAnimalesView();
+                listar.setVisible(true);
+    }
+    
+
 }
