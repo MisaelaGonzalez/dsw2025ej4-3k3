@@ -1,6 +1,18 @@
-# dsw2025ej4
-## Desarrollo de Software - Ejercicio N° 4
-### ** INTEGRANTES **
-### 53245 - Gonzalez Zurita Misaela Antonella Fernanda - Misaela.GonzalezZurita@alu.frt.utn.edu.ar
-### 56375 - Delgado Lara Naredla - Lara.Delgado@alu.frt.utn.edu.ar
-### 56303 - Salvatierra Casadey Candy Athina - Candy.SalvatierraCasadey@alu.frt.utn.edu.ar
+# 🧩 DSW2025 - Ejercicio Nº 4
+
+## 📚 Desarrollo de Software
+
+### 👥 Integrantes del equipo
+
+- **Gonzalez Zurita Misaela Antonella Fernanda**  
+  🆔 *LEGAJO: 53245*  
+  📧 [Misaela.GonzalezZurita@alu.frt.utn.edu.ar](mailto:Misaela.GonzalezZurita@alu.frt.utn.edu.ar)
+
+- **Delgado Lara Naredla**  
+  🆔 *LEGAJO: 56375*  
+  📧 [Lara.Delgado@alu.frt.utn.edu.ar](mailto:Lara.Delgado@alu.frt.utn.edu.ar)
+
+- **Salvatierra Casadey Candy Athina**  
+  🆔 *LEGAJO: 56303*  
+  📧 [Candy.SalvatierraCasadey@alu.frt.utn.edu.ar](mailto:Candy.SalvatierraCasadey@alu.frt.utn.edu.ar)
+
